@@ -8,7 +8,7 @@
   background-color: #e7ecff80;
   overflow: hidden;
   text-align: center;
-  padding: 5rem 5.5rem;
+  padding: 0rem 5.5rem;
 
   .container {
     padding-left: 0 !important;
@@ -81,7 +81,7 @@
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #007bff;
+    background-color: vars.$color-dark-hover;
   }
 }
 

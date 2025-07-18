@@ -39,7 +39,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: vars.$color-primary;
+        color: vars.$color-accent;
       }
     }
   }
@@ -59,12 +59,17 @@
       text-decoration: none;
       color: inherit;
     }
+    &:hover {
+      color: vars.$color-accent;
+    }
     @include media.respond-to(lg) {
       display: none;
     }
   }
 
   .buy-button {
+    text-align: center;
+    width: 160px;
     margin-left: auto;
     z-index: 2;
   }
