@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
     gap: 40px;
 
     &-text {
@@ -75,6 +75,7 @@
 
     &.feature-last {
       flex-direction: row;
+      margin-bottom: 10px;
     }
 
     @include media.respond-to(md) {
