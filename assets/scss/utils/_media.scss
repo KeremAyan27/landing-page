@@ -1,25 +1,13 @@
-@use "../abstracts/breakpoints" as *;
+@use "../abstracts/variables" as vars;
 
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == xs {
-    @media (max-width: $breakpoint-xs) {
+  $value: map-get(vars.$breakpoints, $breakpoint);
+
+  @if $value {
+    @media (max-width: $value) {
       @content;
     }
-  } @else if $breakpoint == sm {
-    @media (max-width: $breakpoint-sm) {
-      @content;
-    }
-  } @else if $breakpoint == md {
-    @media (max-width: $breakpoint-md) {
-      @content;
-    }
-  } @else if $breakpoint == lg {
-    @media (max-width: $breakpoint-lg) {
-      @content;
-    }
-  } @else if $breakpoint == xl {
-    @media (max-width: $breakpoint-xl) {
-      @content;
-    }
+  } @else {
+    @warn "⚠️ Breakpoint '#{$breakpoint}' not found in \$breakpoints map.";
   }
 }

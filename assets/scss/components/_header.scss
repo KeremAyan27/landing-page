@@ -1,10 +1,9 @@
-@use "../utils/media";
 @use "../abstracts/variables" as vars;
+@use "../utils/media" as media;
 
 .site-header {
   background-color: transparent;
-  box-shadow: none;
-  padding: 1.25rem 5.5rem;
+  padding: vars.$spacing-lg 5.5rem;
   position: fixed;
   width: 100%;
   top: 0;
@@ -18,70 +17,74 @@
   }
 
   .wide-container {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: vars.$spacing-lg;
   }
 
-  .site-nav {
-    flex: 1;
+  .site-nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-    ul {
-      display: flex;
-      gap: 40px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    li a {
+      color: vars.$color-dark;
+      font-size: vars.$font-size-base;
+      text-decoration: none;
+      transition: color 0.3s ease;
 
-      li a {
-        text-decoration: none;
-        color: vars.$color-dark;
-        font-size: 16px;
-        transition: color 0.3s;
-
-        &:hover {
-          color: vars.$color-primary;
-        }
+      &:hover {
+        color: vars.$color-primary;
       }
     }
   }
 
   .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 22px;
     font-weight: 700;
     color: vars.$color-dark;
     text-align: center;
+    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
 
     a {
       text-decoration: none;
       color: inherit;
     }
+    @include media.respond-to(lg) {
+      display: none;
+    }
   }
 
   .buy-button {
-    background-color: vars.$color-dark;
-    color: vars.$color-white;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s;
+    margin-left: auto;
+    z-index: 2;
+  }
 
-    &:hover {
-      background-color: vars.$color-dark-hover;
+  @include media.respond-to(sm) {
+    padding: vars.$spacing-md 1.5rem;
+
+    .site-nav ul {
+      gap: 24px;
+
+      li a {
+        font-size: vars.$font-size-sm;
+      }
     }
 
-    @include media.respond-to(sm) {
-      padding: 8px 18px;
-      font-size: 14px;
+    .logo {
+      font-size: 18px;
+    }
+
+    .buy-button {
+      font-size: vars.$font-size-sm;
+      padding: 8px 16px;
     }
   }
 }

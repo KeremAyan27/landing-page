@@ -4,7 +4,7 @@
   background-image: url("../img/Hero.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -12,8 +12,14 @@
   padding: 0 5.5rem;
   font-family: vars.$font-primary;
 
+  @media (max-width: 1170px) {
+    background-size: 250%; // genişliği büyüt
+    background-position: left center; // sola hizala
+  }
+
   .hero-content {
     max-width: 600px;
+    text-align: center;
     color: vars.$color-primary;
 
     h1 {

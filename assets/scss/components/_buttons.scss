@@ -57,22 +57,16 @@
 
 // Header-specific Buy Button
 .buy-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: left;
-  padding: 10px 80px;
+  padding: 10px 24px;
   background-color: vars.$color-primary;
-  border: 2px solid vars.$color-primary;
+  color: vars.$color-white;
   border-radius: 4px;
   font-weight: 600;
-  color: vars.$color-white;
-  font-size: 16px;
   font-family: vars.$font-primary;
   transition: background-color 0.3s ease;
 
   &:hover {
     background-color: vars.$color-accent;
-    color: vars.$color-white;
   }
 
   @include media.respond-to(md) {
