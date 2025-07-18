@@ -1,0 +1,32 @@
+// Color Palette
+$color-primary: #091133; // Primary text color (headers, titles, etc.)
+$color-dark: #111b47; // Dark background for buttons and accents
+$color-dark-hover: #0f1a6a; // Darker shade on hover states
+$color-accent: #007bff; // Accent color (links, interactive highlights)
+$color-secondary: #6c7cb2; // Secondary text color (descriptions, footer links)
+$color-muted: #6c757d; // Muted text (subtexts, captions)
+$color-light-bg: #e7ecff80; // Light background overlays (e.g. pricing section)
+$color-white: #ffffff; // Pure white (backgrounds, button text, etc.)
+
+// Base Sizes (for general layout or spacing logic)
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-size-xl: 32px;
+$font-size-xxl: 48px;
+
+// Semantic Text Sizes (for headings and paragraphs)
+$font-size-p: 1rem;
+$font-size-h3: 2.25rem;
+$font-size-h2: 3.125rem;
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 40px;
+$spacing-xxl: 100px;
+
+// Font Family
+$font-primary: "Inter", sans-serif;

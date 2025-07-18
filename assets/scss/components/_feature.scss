@@ -1,0 +1,93 @@
+@use "../utils/media";
+@use "../abstracts/variables" as vars;
+
+.features {
+  padding: 5rem 5.5rem;
+  background-color: #ffffff;
+
+  .feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 40px;
+
+    &-text {
+      flex: 1;
+
+      h3 {
+        font-size: 28px;
+        color: vars.$color-dark;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        color: vars.$color-muted;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+
+      .feature-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        .feature-card {
+          flex: 1 1 250px;
+          background-color: #f8f9ff;
+          padding: 24px;
+          border-radius: 8px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+
+          img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+          }
+
+          h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          p {
+            font-size: 14px;
+            color: vars.$color-muted;
+          }
+        }
+      }
+    }
+
+    &-image {
+      flex: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &.feature-secondary {
+      flex-direction: row-reverse;
+    }
+
+    &.feature-last {
+      flex-direction: row;
+    }
+
+    @include media.respond-to(md) {
+      flex-direction: column;
+
+      .feature-text,
+      .feature-image {
+        text-align: center;
+      }
+
+      .feature-cards {
+        justify-content: center;
+      }
+    }
+  }
+}

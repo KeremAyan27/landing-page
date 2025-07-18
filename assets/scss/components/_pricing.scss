@@ -1,0 +1,108 @@
+// ── Pricing Section ───────────────────────────────
+
+@use "../abstracts/variables" as vars;
+@use "../utils/media" as media;
+
+.pricing-container1 {
+  position: relative;
+  background-color: #e7ecff80;
+  overflow: hidden;
+  text-align: center;
+  padding: 5rem 5.5rem;
+
+  .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .pricing-top-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: block;
+    z-index: 0;
+    pointer-events: none;
+    background-color: #ffffff;
+  }
+
+  .pricing-container {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 200px 5% 100px; // SVG'den dolayı üst padding artırıldı
+  }
+}
+
+.pricing h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #091133;
+  margin-bottom: 20px;
+}
+
+.pricing-description {
+  color: #6c7cb2;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.price-amount .price {
+  font-size: 48px;
+  font-weight: 700;
+  color: #091133;
+  display: block;
+}
+
+.price-amount .price-desc {
+  font-size: 16px;
+  margin-top: 4px;
+  color: #091133;
+}
+
+.pricing-subtext {
+  color: #6c757d;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.pricing-button {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #091133;
+  color: white;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #007bff;
+  }
+}
+
+// ── Responsive ───────────────────────────────
+
+@media (max-width: 768px) {
+  .pricing-container1 {
+    .pricing-container {
+      padding: 160px 5% 80px;
+    }
+
+    .pricing-top-wave {
+      height: 100px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    .price-amount .price {
+      font-size: 36px;
+    }
+  }
+}
