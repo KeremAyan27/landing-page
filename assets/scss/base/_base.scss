@@ -11,3 +11,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}

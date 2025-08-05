@@ -13,23 +13,9 @@
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- Favicons -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/img/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="assets/img/favicon-16x16.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/img/apple-touch-icon.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Landing Page - Figma" />
@@ -53,176 +39,112 @@
             <a href="/" aria-label="Landing Page Home Page">LANDING</a>
           </h1>
 
-          <nav
-            class="site-nav"
-            aria-label="Main Navigation"
-            aria-hidden="true"
-            tabindex="-1"
-            role="navigation"
-          >
-            <ul>
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#footer-bottom">Contact</a></li>
+          <button class="hamburger-menu" aria-label="Open menu" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="site-nav active" role="dialog" aria-modal="true" aria-label="Main Navigation">
+            <button class="menu-close" aria-label="Close menu">&times;</button>
+            <ul class="site-nav__list">
+              <li class="site-nav__item"><a href="#home" class="site-nav__link">Home</a></li>
+              <li class="site-nav__item"><a href="#about" class="site-nav__link">About</a></li>
+              <li class="site-nav__item"><a href="#contact" class="site-nav__link">Contact</a></li>
             </ul>
+            <div class="site-nav__footer">
+              <a href="/login" class="site-nav__auth-link">Login</a>
+              <a href="/signup" class="site-nav__auth-link">Sign Up</a>
+            </div>
           </nav>
 
           <a href="#buy" class="buy-button">Buy Now</a>
         </div>
       </header>
 
-      <!-- Main Content -->
+      <!-- Main -->
       <main id="main" role="main">
-        <!-- Hero Section -->
+        <!-- Hero -->
         <section id="hero" class="hero">
           <div class="wide-container">
             <div class="hero-content">
               <h2>Introduce Your Product Quickly & Effectively</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Donec quam felis, ultricies nec, pellentesque eu, pretium
-                quis, sem. Nulla consequat massa quis enim.
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                dolor. Aenean massa...
               </p>
               <div class="hero__cta">
-                <a href="#buy" class="button button--primary"
-                  >Purchase UI Kit</a
-                >
+                <a href="#buy" class="button button--primary">Purchase UI Kit</a>
                 <a href="#about" class="button button--secondary">Learn More</a>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- Features Section -->
+        <!-- Features -->
         <section id="about" class="features" aria-labelledby="features-heading">
           <div class="wide-container">
-            <h2 id="features-heading" class="section-title visually-hidden">
-              Key Features
-            </h2>
+            <h2 id="features-heading" class="section-title visually-hidden">Key Features</h2>
 
             <!-- Feature 1 -->
             <article class="feature feature-primary">
               <div class="feature-text">
                 <h3>Light, Fast & Powerful</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                  eu, pretium quis, sem. Nulla consequat massa quis enim.
-                </p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
                 <div class="feature-cards">
                   <div class="feature-card">
-                    <img
-                      src="assets/img/features1.png"
-                      alt="Speed icon: Lightning bolt"
-                      loading="lazy"
-                    />
+                    <img src="assets/img/features1.png" alt="Speed icon" loading="lazy" />
                     <h4>Fast Performance</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                      natoque penatibus et magnis dis parturient montes,
-                      nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                      pellentesque eu, pretium quis, sem. Nulla consequat massa
-                      quis enim.
-                    </p>
+                    <p>...</p>
                   </div>
                   <div class="feature-card">
-                    <img
-                      src="assets/img/features1.png"
-                      alt="Feather icon: Lightweight design"
-                      loading="lazy"
-                    />
+                    <img src="assets/img/features1.png" alt="Feather icon" loading="lazy" />
                     <h4>Minimal Footprint</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                      natoque penatibus et magnis dis parturient montes,
-                      nascetur ridiculus mus. Donec quam felis, ultricies nec,
-                      pellentesque eu, pretium quis, sem. Nulla consequat massa
-                      quis enim.
-                    </p>
+                    <p>...</p>
                   </div>
                 </div>
               </div>
               <div class="feature-image">
-                <img
-                  src="assets/img/features1.png"
-                  alt="App interface mockup on smartphone"
-                  loading="lazy"
-                />
+                <img src="assets/img/features1.png" alt="Mockup" loading="lazy" />
               </div>
             </article>
 
             <!-- Feature 2 -->
-            <article class="feature feature-secondary">
+            <article class="feature reverse-desktop">
               <div class="feature-text">
                 <h3>Reliable Delivery</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                  eu, pretium quis, sem. Nulla consequat massa quis enim.
-                </p>
+                <p>...</p>
               </div>
               <div class="feature-image">
-                <img
-                  src="assets/img/features2.png"
-                  alt="Envelope with green check mark and flower"
-                  loading="lazy"
-                />
+                <img src="assets/img/features2.png" alt="Delivery icon" loading="lazy" />
               </div>
             </article>
 
             <!-- Feature 3 -->
-            <article class="feature feature-secondary">
+            <article class="feature reverse-desktop">
               <div class="feature-text">
                 <h3>Boost Productivity</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                  eu, pretium quis, sem. Nulla consequat massa quis enim.
-                </p>
+                <p>...</p>
               </div>
               <div class="feature-image">
-                <img
-                  src="assets/img/features3.png"
-                  alt="People reacting to a mobile social post"
-                  loading="lazy"
-                />
+                <img src="assets/img/features3.png" alt="Productivity icon" loading="lazy" />
               </div>
             </article>
 
             <!-- Feature 4 -->
-            <article class="feature feature-last">
+            <article class="feature reverse-desktop">
               <div class="feature-image">
-                <img
-                  src="assets/img/features4.png"
-                  alt="Woman with large at-sign symbol"
-                  loading="lazy"
-                />
+                <img src="assets/img/features4.png" alt="Integration icon" loading="lazy" />
               </div>
               <div class="feature-text">
                 <h3>Easy Integration</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                  eu, pretium quis, sem. Nulla consequat massa quis enim.
-                </p>
+                <p>...</p>
               </div>
             </article>
           </div>
         </section>
 
-        <!-- Pricing Section -->
+        <!-- Pricing -->
         <section id="buy" class="pricing pricing-container1">
           <svg
             class="pricing-top-wave"
@@ -232,29 +154,16 @@
             aria-hidden="true"
             focusable="false"
           >
-            <path
-              d="M0,0 C360,120 1080,120 1440,0 L1440,150 L0,150 Z"
-              fill="#e7ecff80"
-            ></path>
+            <path d="M0,0 C360,120 1080,120 1440,0 L1440,150 L0,150 Z" fill="#e7ecff80"></path>
           </svg>
-
           <div class="container pricing-container">
             <h2>A Price To Suit Everyone</h2>
-            <p class="pricing-description">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem. Nulla consequat massa quis enim.
-            </p>
-
+            <p class="pricing-description">...</p>
             <div class="price-amount">
               <span class="price">$40</span>
               <span class="price-desc">UI Design Kit</span>
             </div>
-
             <p class="pricing-subtext">See, One price. Simple.</p>
-
             <a href="#buy" class="pricing-button">Purchase Now</a>
           </div>
         </section>
@@ -268,67 +177,28 @@
             <span class="footer-logo">LANDING</span>
             <a href="#buy" class="footer-button">Purchase Now</a>
           </div>
-
           <hr class="footer-divider" />
-
           <div class="footer-bottom">
             <ul class="footer-nav">
               <li><a href="#hero">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#buy">Purchase Now</a></li>
             </ul>
-
             <div class="footer-social">
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                aria-label="Facebook"
-              >
-                <img
-                  src="assets/img/facebook.png"
-                  alt="Facebook icon"
-                  loading="lazy"
-                />
+              <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <img src="assets/img/facebook.png" alt="Facebook icon" loading="lazy" />
               </a>
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                aria-label="LinkedIn"
-              >
-                <img
-                  src="assets/img/linkedin.png"
-                  alt="LinkedIn icon"
-                  loading="lazy"
-                />
+              <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+                <img src="assets/img/linkedin.png" alt="LinkedIn icon" loading="lazy" />
               </a>
               <a href="https://x.com/" target="_blank" aria-label="X (Twitter)">
-                <img
-                  src="assets/img/twitter.png"
-                  alt="X (Twitter) icon"
-                  loading="lazy"
-                />
+                <img src="assets/img/twitter.png" alt="X icon" loading="lazy" />
               </a>
-              <a
-                href="https://www.youtube.com/"
-                target="_blank"
-                aria-label="YouTube"
-              >
-                <img
-                  src="assets/img/youtube.png"
-                  alt="YouTube icon"
-                  loading="lazy"
-                />
+              <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube">
+                <img src="assets/img/youtube.png" alt="YouTube icon" loading="lazy" />
               </a>
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                aria-label="Instagram"
-              >
-                <img
-                  src="assets/img/Instagram.png"
-                  alt="Instagram icon"
-                  loading="lazy"
-                />
+              <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <img src="assets/img/Instagram.png" alt="Instagram icon" loading="lazy" />
               </a>
             </div>
           </div>

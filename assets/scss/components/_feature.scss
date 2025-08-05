@@ -7,8 +7,8 @@
 
   .feature {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 100px;
     gap: 40px;
 
@@ -69,20 +69,20 @@
       }
     }
 
-    &.feature-secondary {
-      flex-direction: row-reverse;
+    // Feature 2, 3, 4: reverse only on desktop
+    &.reverse-desktop {
+      @include media.respond-from(lg) {
+        flex-direction: row-reverse;
+      }
     }
 
-    &.feature-last {
-      flex-direction: row;
-      margin-bottom: 10px;
-    }
-
-    @include media.respond-to(md) {
+    // Mobile: all stacked as image then text
+    @include media.respond-to(lg) {
       flex-direction: column;
 
       .feature-text,
       .feature-image {
+        width: 100%;
         text-align: center;
       }
 
